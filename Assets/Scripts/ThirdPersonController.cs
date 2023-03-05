@@ -159,6 +159,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Action();
         }
 
         private void LateUpdate()
@@ -346,6 +347,15 @@ namespace StarterAssets
             {
                 _verticalVelocity += Gravity * Time.deltaTime;
             }
+        }
+
+        private void Action()
+        {
+            if(_input.action)
+            {
+                
+            }
+            _input.action = false;
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
