@@ -20,7 +20,7 @@ namespace SojaExiles
         {
             open = false;
             //_input = GetComponent<StarterAssetsInputs>();
-
+            _input = Player.GetComponent<StarterAssetsInputs>();
         }
 
         private void Update()
@@ -35,12 +35,14 @@ namespace SojaExiles
                 if (Player)
                 {
                     float dist = Vector3.Distance(Player.position, transform.position);
-                    if (dist < 15)
+                   
+                    if (dist < 2.5)
                     {
                         if (open == false)
                         {
-                            if (Input.GetMouseButtonDown(0))
+                            if (_input.action)
                             {
+
                                 StartCoroutine(opening());
                             }
                         }
@@ -48,7 +50,7 @@ namespace SojaExiles
                         {
                             if (open == true)
                             {
-                                if (Input.GetMouseButtonDown(0))
+                                if (_input.action)
                                 {
                                     StartCoroutine(closing());
                                 }
