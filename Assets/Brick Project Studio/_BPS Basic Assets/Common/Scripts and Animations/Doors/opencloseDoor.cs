@@ -15,8 +15,6 @@ namespace SojaExiles
         public bool open;
         public Transform Player;
 
-        private StarterAssetsInputs _input;
-
         private PlayerControls playerControls;
         private InputAction action;
 
@@ -28,10 +26,7 @@ namespace SojaExiles
         void Start()
         {
             open = false;
-            //_input = GetComponent<StarterAssetsInputs>();
-            //_input = Player.GetComponent<StarterAssetsInputs>();
         }
-
 
         private void OnEnable()
         {
@@ -39,8 +34,6 @@ namespace SojaExiles
             action.Enable();
             action.performed += Action;
 
-            
-            //Action();
         }
 
         void Action(InputAction.CallbackContext context)
