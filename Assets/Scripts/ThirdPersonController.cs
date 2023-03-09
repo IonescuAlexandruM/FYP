@@ -160,6 +160,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
             Action();
+            Pause();
         }
 
         private void LateUpdate()
@@ -356,6 +357,15 @@ namespace StarterAssets
 
             }
             _input.action = false;
+        } 
+        
+        private void Pause()
+        {
+            if (_input.pause)
+            {
+                Debug.Log("Esc press");
+            }
+            _input.pause = false;
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

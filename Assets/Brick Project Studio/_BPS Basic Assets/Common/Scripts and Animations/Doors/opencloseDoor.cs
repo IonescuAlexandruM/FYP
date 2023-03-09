@@ -1,6 +1,7 @@
 ﻿using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,48 +17,58 @@ namespace SojaExiles
 
         private StarterAssetsInputs _input;
 
+        private PlayerControls playerControls;
+        private InputAction action;
+
+        void Awake()
+        {
+            playerControls = new PlayerControls();
+        }
+
         void Start()
         {
             open = false;
             //_input = GetComponent<StarterAssetsInputs>();
-            _input = Player.GetComponent<StarterAssetsInputs>();
+            //_input = Player.GetComponent<StarterAssetsInputs>();
         }
 
-        private void Update()
+
+        private void OnEnable()
         {
-            Action();
+            action = playerControls.Player.Action;
+            action.Enable();
+            action.performed += Action;
+
+            
+            //Action();
         }
 
-        void Action()
+        void Action(InputAction.CallbackContext context)
         {
-            //if (_input.action)
+            Debug.Log("E pressed");
+            if (Player)
             {
-                if (Player)
+                float dist = Vector3.Distance(Player.position, transform.position);
+
+                if (dist < 2.5)
                 {
-                    float dist = Vector3.Distance(Player.position, transform.position);
-                   
-                    if (dist < 2.5)
+                    if (open == false)
                     {
-                        if (open == false)
+                        // if (_input.action)
                         {
-                            if (_input.action)
-                            {
 
-                                StartCoroutine(opening());
+                            StartCoroutine(opening());
+                        }
+                    }
+                    else
+                    {
+                        if (open == true)
+                        {
+                            //if (_input.action)
+                            {
+                                StartCoroutine(closing());
                             }
                         }
-                        else
-                        {
-                            if (open == true)
-                            {
-                                if (_input.action)
-                                {
-                                    StartCoroutine(closing());
-                                }
-                            }
-
-                        }
-
                     }
                 }
             }
