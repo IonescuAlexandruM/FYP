@@ -38,7 +38,7 @@ namespace SojaExiles
 
         void Action(InputAction.CallbackContext context)
         {
-            Debug.Log("E pressed");
+            //Debug.Log("E pressed");
             if (Player)
             {
                 float dist = Vector3.Distance(Player.position, transform.position);
@@ -47,20 +47,13 @@ namespace SojaExiles
                 {
                     if (open == false)
                     {
-                        // if (_input.action)
-                        {
-
-                            StartCoroutine(opening());
-                        }
+                        StartCoroutine(opening());
                     }
                     else
                     {
                         if (open == true)
                         {
-                            //if (_input.action)
-                            {
-                                StartCoroutine(closing());
-                            }
+                            StartCoroutine(closing());
                         }
                     }
                 }

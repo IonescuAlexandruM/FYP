@@ -30,10 +30,10 @@ public class CameraScript : MonoBehaviour
         aboveButton.onClick.AddListener(() => ChangeCameraPosition(0.5f, 0.5f, 0.5f));
 
         Button topRightButton = topRight.GetComponent<Button>();
-        topRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.8f, 1.5f));  
+        topRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.7f, 1.5f));  
         
         Button botRightButton = botRight.GetComponent<Button>();
-        botRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.8f, 0.5f));
+        botRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.7f, 0.5f));
 
 
     }
