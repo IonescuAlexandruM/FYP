@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public Transform Player;
-
+    public string scene;
     private void OnTriggerEnter(Collider other)
     {
         if (Player)
-            SceneManager.LoadScene("TestScene");
+            SceneManager.LoadScene(scene);
     }
 }
