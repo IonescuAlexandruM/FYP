@@ -12,8 +12,9 @@ namespace SojaExiles
     {
 
         public Animator openandclose;
-        public bool open;
         public Transform Player;
+        public bool open;
+        public float distance = 3;
 
         private PlayerControls playerControls;
         private InputAction action;
@@ -42,8 +43,8 @@ namespace SojaExiles
             if (Player)
             {
                 float dist = Vector3.Distance(Player.position, transform.position);
-
-                if (dist < 2.5)
+                Debug.Log("Distance: " + dist);
+                if (dist < distance)
                 {
                     if (open == false)
                     {
