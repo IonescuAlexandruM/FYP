@@ -24,16 +24,16 @@ public class CameraScript : MonoBehaviour
         
 
         Button behindButton= behind.GetComponent<Button>();
-        behindButton.onClick.AddListener(()=>ChangeCameraPosition(0f, 0.5f, 0.5f)); 
+        behindButton.onClick.AddListener(()=>ChangeCameraPosition(0f, 0.5f, 0.4f)); 
 
         Button aboveButton = above.GetComponent<Button>();
-        aboveButton.onClick.AddListener(() => ChangeCameraPosition(0.5f, 0.5f, 0.5f));
+        aboveButton.onClick.AddListener(() => ChangeCameraPosition(0.2f, 0.5f, 0.4f));
 
         Button topRightButton = topRight.GetComponent<Button>();
         topRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.7f, 1.5f));  
         
         Button botRightButton = botRight.GetComponent<Button>();
-        botRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.7f, 0.5f));
+        botRightButton.onClick.AddListener(() => ChangeCameraPosition(0f, 0.7f, 0.0f));
 
 
     }
