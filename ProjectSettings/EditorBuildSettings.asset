@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/RuleOfThirds.unity
     guid: e9017d5f96b9f09489b4b37e1d6eb914
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 9a219923e9ed0204cb6e3ac9256c957f
-  - enabled: 1
     path: Assets/Scenes/Forest(Balance).unity
     guid: bf981e8d43ec1444baf785a09342aaeb
   - enabled: 1
@@ -20,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desert(LeadingLines).unity
     guid: fe3e2e6648cc8274299a6d27a8283597
+  - enabled: 1
+    path: Assets/Scenes/Symmetry.unity
+    guid: e9285ce0af0a4004bb1ef836aea98289
+  - enabled: 1
+    path: Assets/Scenes/DominantSubject.unity
+    guid: a73dc823183574742a78cf09dc86cf86
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
