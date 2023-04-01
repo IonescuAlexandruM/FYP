@@ -23,5 +23,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DominantSubject.unity
     guid: a73dc823183574742a78cf09dc86cf86
+  - enabled: 1
+    path: Assets/Scenes/Symbolism.unity
+    guid: 3a9153c6e663dd046a96233aa7e03901
+  - enabled: 1
+    path: Assets/Scenes/LeitMotif.unity
+    guid: 3ca1b8c0f1a03b44e9a6dbddf75abea2
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 8f035b14b59d0a744a65ce07ac6afb1c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
